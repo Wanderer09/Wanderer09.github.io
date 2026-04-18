@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Your Name | Homepage</title>
+    <title>Zhiyuan Wang | Homepage</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Personal homepage for job applications." />
+    <meta name="description" content="Zhiyuan Wang's personal homepage for background, research, projects, and job applications." />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="is-preload">
@@ -13,10 +13,10 @@
       <div class="inner">
         <a href="images/avatar.jpg" class="image avatar"><img src="images/avatar.jpg" alt="avatar placeholder" /></a>
         <h1>
-          <strong>Your Name</strong><br />
-          Personal homepage placeholder<br />
-          for background, projects,<br />
-          and job applications.
+          <strong>Zhiyuan Wang</strong><br />
+          Undergraduate in Computer Science,<br />
+          researcher in ML for EDA,<br />
+          and builder of systems projects.
         </h1>
       </div>
     </header>
@@ -27,11 +27,14 @@
           <h2>About Me</h2>
         </header>
         <p>
-          这里填写你的个人简介。建议用 4 到 6 句话概括你的教育背景、求职方向、技术兴趣和你希望解决的问题。
-          这部分应当让招聘方在最短时间内知道你是谁、你擅长什么、你正在寻找什么机会。
+          I am a senior undergraduate in Computer Science at the University of Chinese Academy of Sciences, with a Spring 2025
+          visiting experience at UC Berkeley. My recent work focuses on machine learning for electronic design automation,
+          especially surrogate modeling, uncertainty-aware Bayesian optimization, and data-driven analog circuit sizing.
         </p>
         <p>
-          你可以把它替换为更具体的内容，例如你的专业、年级、毕业时间、目标岗位、主力技术栈，以及你最有代表性的项目方向。
+          Alongside research, I enjoy building systems close to the hardware stack, including operating systems, processor
+          architecture, compiler toolchains, and FPGA-based implementation. I am interested in using data-efficient machine
+          learning methods to improve the speed and reliability of scientific and engineering workflows.
         </p>
         <ul class="actions">
           <li><a href="#profile" class="button">Continue</a></li>
@@ -42,55 +45,81 @@
         <h2>Education</h2>
         <ul>
           <li>
-            <b>Degree / Major Placeholder</b>
-            <br />University Placeholder
-            <br /><i>Start Date - End Date</i>
+            <b>B.S. in Computer Science and Technology</b>
+            <br />University of Chinese Academy of Sciences
+            <br /><i>Sep. 2022 - Jun. 2026 (expected)</i>
+            <br />GPA: 3.86/4.0
+          </li>
+          <li>
+            <b>GLOBE Visiting Program, College of Engineering</b>
+            <br />University of California, Berkeley
+            <br /><i>Jan. 2025 - May 2025</i>
           </li>
         </ul>
 
         <h2>Skills</h2>
         <ul>
-          <li><b>Frontend:</b> HTML, CSS, JavaScript, TypeScript, React, Next.js</li>
-          <li><b>Backend:</b> Node.js, Python, Database Placeholder</li>
-          <li><b>Tools:</b> Git, GitHub, Linux, Deployment Placeholder</li>
+          <li><b>Programming:</b> C/C++, Python, Verilog</li>
+          <li><b>ML / Optimization:</b> PyTorch, Bayesian optimization, genetic algorithms, surrogate modeling</li>
+          <li><b>Hardware / EDA:</b> computer architecture, analog and mixed-signal circuits, EDA workflows</li>
         </ul>
 
         <h2>Projects</h2>
         <ul>
           <li>
-            <b>Project Placeholder 01</b>
-            <br />一句话描述项目目标和用户场景。
-            <br />职责占位：页面开发、接口联调、组件抽象、性能优化等。
-            <br /><i>Tech Stack Placeholder</i>
+            <b>SAR-ADC Surrogate Modeling and Bayesian Optimization</b>
+            <br />Built a surrogate-modeling pipeline to replace costly simulator-in-the-loop evaluations in SAR-ADC sizing.
+            <br />Designed an uncertainty-aware, offline dataset-driven framework that adaptively switches between surrogate
+            predictions and circuit simulator calls to improve sample efficiency and robustness.
+            <br /><i>Python, Bayesian optimization, Bayesian neural networks, analog circuit sizing</i>
           </li>
           <li>
-            <b>Project Placeholder 02</b>
-            <br />一句话描述项目的核心价值或技术难点。
-            <br />职责占位：功能设计、系统实现、测试部署、文档整理等。
-            <br /><i>Tech Stack Placeholder</i>
+            <b>C-based RISC-V Operating System Kernel</b>
+            <br />Implemented an OS kernel with more than 5,000 lines of code for process management, virtual memory, a
+            minimal file system, and dual-core scheduling.
+            <br />Validated the system through systematic debugging and stress testing in the operating systems course project.
+            <br /><i>C, RISC-V, operating systems, debugging</i>
           </li>
           <li>
-            <b>Project Placeholder 03</b>
-            <br />如果项目较少，可以放课程项目、科研项目、竞赛项目或开源贡献。
-            <br />职责占位：说明你做了什么，以及结果如何。
-            <br /><i>Tech Stack Placeholder</i>
+            <b>LoongArch32 Pipelined Processor Design</b>
+            <br />Designed and implemented a LoongArch32 pipelined CPU with a 67-instruction subset, exception and interrupt
+            handling, TLB-based MMU, AXI bus, and instruction/data caches.
+            <br />Brought the design up on FPGA and verified it with representative workloads in a computer architecture project.
+            <br /><i>Verilog, computer architecture, FPGA, LoongArch32</i>
           </li>
         </ul>
 
         <h2>Experience</h2>
         <ul>
           <li>
-            <b>Internship / Research / Team Placeholder</b>
-            <br /><i>Role Placeholder</i>
-            <br />这里填写你的工作内容、解决的问题和最终成果。
-            <br /><i>Date Placeholder</i>
+            <b>Ningbo Institute of Digital Twin; Eastern Institute of Technology (EIT)</b>
+            <br /><i>Research Intern, advised by Lei He</i>
+            <br />Worked on ML-based analog circuit sizing, uncertainty-aware Bayesian optimization, and surrogate modeling for
+            SAR-ADC design. Contributed to an ISCAS submission as second author.
+            <br /><i>Jun. 2025 - Present</i>
           </li>
           <li>
-            <b>Internship / Research / Team Placeholder</b>
-            <br /><i>Role Placeholder</i>
-            <br />如果没有正式实习，可以替换成实验室、竞赛、学生组织或独立项目经历。
-            <br /><i>Date Placeholder</i>
+            <b>State Key Laboratory of Processors; ICT, Chinese Academy of Sciences</b>
+            <br /><i>Research Intern, advised by Yunji Chen</i>
+            <br />Worked on an AI-assisted processor IP library for digital circuit design, focusing on variable reordering for
+            Binary Decision Diagrams using heuristic, evolutionary, and Bayesian search strategies.
+            <br /><i>Mar. 2025 - Aug. 2025</i>
           </li>
+          <li>
+            <b>Microprocessor Research Center; ICT, Chinese Academy of Sciences</b>
+            <br /><i>Research Intern, advised by Fuxin Zhang</i>
+            <br />Upgraded the AOSP compiler toolchain for LoongArch, built a reproducible cross-compilation environment, and
+            resolved ABI, linker, and runtime issues for stable Android target builds.
+            <br /><i>Jul. 2024 - Aug. 2024</i>
+          </li>
+        </ul>
+
+        <h2>Honors & Leadership</h2>
+        <ul>
+          <li>China Postgraduate IC Innovation Competition, EDA Elite Challenge Contest, Second Prize (Nov. 2025)</li>
+          <li>University-level Merit Student Award, UCAS (2023, 2024, 2025)</li>
+          <li>Undergraduate Role Model of the Year Award, UCAS (Dec. 2024)</li>
+          <li>Vice President, Student Union, UCAS (2024 - 2025)</li>
         </ul>
       </section>
 
@@ -99,13 +128,13 @@
         <div class="row">
           <article class="col-6 col-12-xsmall work-item">
             <a href="#" class="image fit thumb"><img src="images/bg.jpg" alt="project placeholder" /></a>
-            <h3>Highlight Placeholder 01</h3>
-            <p>这里可以放项目截图、作品预览图，或代表性成果说明。</p>
+            <h3>Surrogate Modeling for Analog Circuit Sizing</h3>
+            <p>Research on replacing expensive simulator calls with uncertainty-aware surrogate models for more efficient Bayesian optimization.</p>
           </article>
           <article class="col-6 col-12-xsmall work-item">
             <a href="#" class="image fit thumb"><img src="images/bg-shenzhen.jpg" alt="project placeholder" /></a>
-            <h3>Highlight Placeholder 02</h3>
-            <p>如果暂时没有截图，可以先用占位图，后续再换成真实项目图片。</p>
+            <h3>Systems and Architecture Projects</h3>
+            <p>Hands-on implementation across operating systems, processor design, compiler toolchains, and FPGA deployment.</p>
           </article>
         </div>
       </section>
@@ -113,22 +142,23 @@
       <section id="three">
         <h2>Contact</h2>
         <p>
-          这里填写你的联系方式。建议至少保留邮箱、GitHub、LinkedIn 和简历 PDF 链接。
+          Feel free to reach out for research collaboration, internship opportunities, or full-time roles related to machine
+          learning, EDA, systems, and computer architecture.
         </p>
         <div class="row">
           <div class="col-8 col-12-small">
             <ul class="labeled-icons">
               <li>
                 <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                <a href="mailto:wangzhiyuan223@mails.ucas.ac.cn">wangzhiyuan223@mails.ucas.ac.cn</a>
               </li>
               <li>
                 <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
                 <a href="https://github.com/Wanderer09">github.com/Wanderer09</a>
               </li>
               <li>
-                <h3 class="icon solid fa-file-pdf"><span class="label">Resume</span></h3>
-                <a href="#">Resume PDF Placeholder</a>
+                <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+                <span>+86 138-1257-7982</span>
               </li>
             </ul>
           </div>
@@ -140,11 +170,11 @@
       <div class="inner">
         <ul class="icons">
           <li><a href="https://github.com/Wanderer09" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-          <li><a href="mailto:your.email@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-          <li><a href="#" class="icon solid fa-file-pdf"><span class="label">Resume</span></a></li>
+          <li><a href="mailto:wangzhiyuan223@mails.ucas.ac.cn" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+          <li><a href="attachments/Zhiyuan%20Wang_Resume_CS.pdf" class="icon solid fa-file-pdf"><span class="label">Resume</span></a></li>
         </ul>
         <ul class="copyright">
-          <li>&copy; Your Name</li>
+          <li>&copy; Zhiyuan Wang</li>
           <li>Design base: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </div>
