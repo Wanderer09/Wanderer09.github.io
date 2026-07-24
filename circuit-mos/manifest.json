@@ -1,0 +1,771 @@
+{
+  "schema": "circuit-mos-manifest-v1",
+  "version": "2026-07-24-direct-v1",
+  "generatedAt": "2026-07-24T09:23:05.9645598Z",
+  "cases": [
+    {
+      "id": "c-ec6b9445a8be9f",
+      "images": [
+        {
+          "id": "i-95a4f6a6fe90f2",
+          "src": "assets/i-95a4f6a6fe90f2.png"
+        },
+        {
+          "id": "i-a2160040fa322a",
+          "src": "assets/i-a2160040fa322a.png"
+        },
+        {
+          "id": "i-be48092b4f8761",
+          "src": "assets/i-be48092b4f8761.png"
+        },
+        {
+          "id": "i-f06a17c1b63e73",
+          "src": "assets/i-f06a17c1b63e73.png"
+        }
+      ]
+    },
+    {
+      "id": "c-a05c92304b4d8c",
+      "images": [
+        {
+          "id": "i-36268ea1c9b58e",
+          "src": "assets/i-36268ea1c9b58e.png"
+        },
+        {
+          "id": "i-6fb50d62a506cf",
+          "src": "assets/i-6fb50d62a506cf.png"
+        },
+        {
+          "id": "i-718e7a79d4311e",
+          "src": "assets/i-718e7a79d4311e.png"
+        },
+        {
+          "id": "i-dc979848868e28",
+          "src": "assets/i-dc979848868e28.png"
+        }
+      ]
+    },
+    {
+      "id": "c-16d4ee06c332b6",
+      "images": [
+        {
+          "id": "i-3637df06d245e3",
+          "src": "assets/i-3637df06d245e3.png"
+        },
+        {
+          "id": "i-e7c88f939382db",
+          "src": "assets/i-e7c88f939382db.png"
+        },
+        {
+          "id": "i-edab1083638935",
+          "src": "assets/i-edab1083638935.png"
+        },
+        {
+          "id": "i-f2e5e8dcf35178",
+          "src": "assets/i-f2e5e8dcf35178.png"
+        }
+      ]
+    },
+    {
+      "id": "c-038780aaa617d9",
+      "images": [
+        {
+          "id": "i-315cc38277dc96",
+          "src": "assets/i-315cc38277dc96.png"
+        },
+        {
+          "id": "i-48982f2a0449ab",
+          "src": "assets/i-48982f2a0449ab.png"
+        },
+        {
+          "id": "i-90a751a5124fdd",
+          "src": "assets/i-90a751a5124fdd.png"
+        },
+        {
+          "id": "i-a7a027b18daeba",
+          "src": "assets/i-a7a027b18daeba.png"
+        }
+      ]
+    },
+    {
+      "id": "c-13ec55a4c7d8c5",
+      "images": [
+        {
+          "id": "i-27f75644d7a044",
+          "src": "assets/i-27f75644d7a044.png"
+        },
+        {
+          "id": "i-3782ac247700f5",
+          "src": "assets/i-3782ac247700f5.png"
+        },
+        {
+          "id": "i-6f28f6271f9502",
+          "src": "assets/i-6f28f6271f9502.png"
+        },
+        {
+          "id": "i-80ee2a61e05008",
+          "src": "assets/i-80ee2a61e05008.png"
+        }
+      ]
+    },
+    {
+      "id": "c-36fe3d19f75176",
+      "images": [
+        {
+          "id": "i-5f940126896ede",
+          "src": "assets/i-5f940126896ede.png"
+        },
+        {
+          "id": "i-75cd0f109bc17b",
+          "src": "assets/i-75cd0f109bc17b.png"
+        },
+        {
+          "id": "i-b2fbcb90c41c7f",
+          "src": "assets/i-b2fbcb90c41c7f.png"
+        }
+      ]
+    },
+    {
+      "id": "c-99a5af8fe99762",
+      "images": [
+        {
+          "id": "i-53a0bb2dd1c9ad",
+          "src": "assets/i-53a0bb2dd1c9ad.png"
+        },
+        {
+          "id": "i-6112f102a6ebb4",
+          "src": "assets/i-6112f102a6ebb4.png"
+        },
+        {
+          "id": "i-9bc1ef11d3b349",
+          "src": "assets/i-9bc1ef11d3b349.png"
+        },
+        {
+          "id": "i-d4d8c11f415c00",
+          "src": "assets/i-d4d8c11f415c00.png"
+        }
+      ]
+    },
+    {
+      "id": "c-8699f849cabd42",
+      "images": [
+        {
+          "id": "i-2f9ed1f74745e1",
+          "src": "assets/i-2f9ed1f74745e1.png"
+        },
+        {
+          "id": "i-5f940668bc4a4d",
+          "src": "assets/i-5f940668bc4a4d.png"
+        },
+        {
+          "id": "i-f61b6b6c55ed13",
+          "src": "assets/i-f61b6b6c55ed13.png"
+        }
+      ]
+    },
+    {
+      "id": "c-402b0dc04aaee8",
+      "images": [
+        {
+          "id": "i-4cf26aaea2acd0",
+          "src": "assets/i-4cf26aaea2acd0.png"
+        },
+        {
+          "id": "i-9a54b9237997b8",
+          "src": "assets/i-9a54b9237997b8.png"
+        },
+        {
+          "id": "i-9d7ee2a5ec72f2",
+          "src": "assets/i-9d7ee2a5ec72f2.png"
+        },
+        {
+          "id": "i-a8f2af78e0dd58",
+          "src": "assets/i-a8f2af78e0dd58.png"
+        }
+      ]
+    },
+    {
+      "id": "c-8cf4ac2a8a1fa9",
+      "images": [
+        {
+          "id": "i-71649f85628afb",
+          "src": "assets/i-71649f85628afb.png"
+        },
+        {
+          "id": "i-88ca0880a52830",
+          "src": "assets/i-88ca0880a52830.png"
+        },
+        {
+          "id": "i-8fe69078ede74b",
+          "src": "assets/i-8fe69078ede74b.png"
+        }
+      ]
+    },
+    {
+      "id": "c-532514ed92b4de",
+      "images": [
+        {
+          "id": "i-37636f762b2317",
+          "src": "assets/i-37636f762b2317.png"
+        },
+        {
+          "id": "i-6142af1607cc60",
+          "src": "assets/i-6142af1607cc60.png"
+        },
+        {
+          "id": "i-9c2f505b43a422",
+          "src": "assets/i-9c2f505b43a422.png"
+        },
+        {
+          "id": "i-aab5f0a1356035",
+          "src": "assets/i-aab5f0a1356035.png"
+        }
+      ]
+    },
+    {
+      "id": "c-f2bc65e069d881",
+      "images": [
+        {
+          "id": "i-54214c2453925a",
+          "src": "assets/i-54214c2453925a.png"
+        },
+        {
+          "id": "i-bb6228befd93bc",
+          "src": "assets/i-bb6228befd93bc.png"
+        },
+        {
+          "id": "i-e9e66bc3cc5b25",
+          "src": "assets/i-e9e66bc3cc5b25.png"
+        },
+        {
+          "id": "i-eb19ca2a1a4662",
+          "src": "assets/i-eb19ca2a1a4662.png"
+        }
+      ]
+    },
+    {
+      "id": "c-6db66014fd6ed2",
+      "images": [
+        {
+          "id": "i-49d82ecece02b3",
+          "src": "assets/i-49d82ecece02b3.png"
+        },
+        {
+          "id": "i-56794572852e30",
+          "src": "assets/i-56794572852e30.png"
+        },
+        {
+          "id": "i-ce9f04309acf1c",
+          "src": "assets/i-ce9f04309acf1c.png"
+        }
+      ]
+    },
+    {
+      "id": "c-835d23a951e0ea",
+      "images": [
+        {
+          "id": "i-2743a5cf1e31b2",
+          "src": "assets/i-2743a5cf1e31b2.png"
+        },
+        {
+          "id": "i-dc4d53b4091101",
+          "src": "assets/i-dc4d53b4091101.png"
+        },
+        {
+          "id": "i-e6c2cf69ddb797",
+          "src": "assets/i-e6c2cf69ddb797.png"
+        }
+      ]
+    },
+    {
+      "id": "c-9f881eef5b6e12",
+      "images": [
+        {
+          "id": "i-29e6e6365990cc",
+          "src": "assets/i-29e6e6365990cc.png"
+        },
+        {
+          "id": "i-3d0479a56021b8",
+          "src": "assets/i-3d0479a56021b8.png"
+        },
+        {
+          "id": "i-886a9890f40645",
+          "src": "assets/i-886a9890f40645.png"
+        }
+      ]
+    },
+    {
+      "id": "c-b22427aaf89251",
+      "images": [
+        {
+          "id": "i-00f8988bee7a96",
+          "src": "assets/i-00f8988bee7a96.png"
+        },
+        {
+          "id": "i-5de89f42b9240e",
+          "src": "assets/i-5de89f42b9240e.png"
+        },
+        {
+          "id": "i-94c55719e6bbca",
+          "src": "assets/i-94c55719e6bbca.png"
+        },
+        {
+          "id": "i-ed56414f3bff1e",
+          "src": "assets/i-ed56414f3bff1e.png"
+        }
+      ]
+    },
+    {
+      "id": "c-bc87534842936c",
+      "images": [
+        {
+          "id": "i-3c3e99e531d6c2",
+          "src": "assets/i-3c3e99e531d6c2.png"
+        },
+        {
+          "id": "i-9e4347f123492f",
+          "src": "assets/i-9e4347f123492f.png"
+        },
+        {
+          "id": "i-a84d6abf0aed33",
+          "src": "assets/i-a84d6abf0aed33.png"
+        },
+        {
+          "id": "i-dff3dff70ddd0a",
+          "src": "assets/i-dff3dff70ddd0a.png"
+        }
+      ]
+    },
+    {
+      "id": "c-b34aaa79304c50",
+      "images": [
+        {
+          "id": "i-9c4490634cbbef",
+          "src": "assets/i-9c4490634cbbef.png"
+        },
+        {
+          "id": "i-b4bd4bef9bb6e8",
+          "src": "assets/i-b4bd4bef9bb6e8.png"
+        },
+        {
+          "id": "i-ddf9a5aefe25d3",
+          "src": "assets/i-ddf9a5aefe25d3.png"
+        }
+      ]
+    },
+    {
+      "id": "c-21a2620eddbd2a",
+      "images": [
+        {
+          "id": "i-0a631d4f2e0635",
+          "src": "assets/i-0a631d4f2e0635.png"
+        },
+        {
+          "id": "i-a327579ec9608b",
+          "src": "assets/i-a327579ec9608b.png"
+        },
+        {
+          "id": "i-eee4d0c51cc41b",
+          "src": "assets/i-eee4d0c51cc41b.png"
+        }
+      ]
+    },
+    {
+      "id": "c-300a6276c08df6",
+      "images": [
+        {
+          "id": "i-0ac29a5ed4b807",
+          "src": "assets/i-0ac29a5ed4b807.png"
+        },
+        {
+          "id": "i-afcb2a986a28f6",
+          "src": "assets/i-afcb2a986a28f6.png"
+        },
+        {
+          "id": "i-bc135118f4b85f",
+          "src": "assets/i-bc135118f4b85f.png"
+        },
+        {
+          "id": "i-d354acd1a50dbe",
+          "src": "assets/i-d354acd1a50dbe.png"
+        }
+      ]
+    },
+    {
+      "id": "c-acba02c4fafba2",
+      "images": [
+        {
+          "id": "i-090240ff155bdc",
+          "src": "assets/i-090240ff155bdc.png"
+        },
+        {
+          "id": "i-36bb7cb2ff1675",
+          "src": "assets/i-36bb7cb2ff1675.png"
+        },
+        {
+          "id": "i-69664ec68349b1",
+          "src": "assets/i-69664ec68349b1.png"
+        }
+      ]
+    },
+    {
+      "id": "c-0493052b968a24",
+      "images": [
+        {
+          "id": "i-0c9850286043ef",
+          "src": "assets/i-0c9850286043ef.png"
+        },
+        {
+          "id": "i-97b01cbd3ded2b",
+          "src": "assets/i-97b01cbd3ded2b.png"
+        },
+        {
+          "id": "i-a55cce9a9599f9",
+          "src": "assets/i-a55cce9a9599f9.png"
+        },
+        {
+          "id": "i-adbbe50060a16d",
+          "src": "assets/i-adbbe50060a16d.png"
+        }
+      ]
+    },
+    {
+      "id": "c-9c2dff65f3d50e",
+      "images": [
+        {
+          "id": "i-5c6fc86fb89fe7",
+          "src": "assets/i-5c6fc86fb89fe7.png"
+        },
+        {
+          "id": "i-9527cd034ab49a",
+          "src": "assets/i-9527cd034ab49a.png"
+        },
+        {
+          "id": "i-ab8c7d82866901",
+          "src": "assets/i-ab8c7d82866901.png"
+        },
+        {
+          "id": "i-f25f5377481c18",
+          "src": "assets/i-f25f5377481c18.png"
+        }
+      ]
+    },
+    {
+      "id": "c-44ba27cdfbe6e4",
+      "images": [
+        {
+          "id": "i-24eee866655652",
+          "src": "assets/i-24eee866655652.png"
+        },
+        {
+          "id": "i-2b338ce717c250",
+          "src": "assets/i-2b338ce717c250.png"
+        },
+        {
+          "id": "i-d94241e9480e93",
+          "src": "assets/i-d94241e9480e93.png"
+        },
+        {
+          "id": "i-e1433ae8458cd8",
+          "src": "assets/i-e1433ae8458cd8.png"
+        }
+      ]
+    },
+    {
+      "id": "c-274b50e1250b4b",
+      "images": [
+        {
+          "id": "i-014f3636026224",
+          "src": "assets/i-014f3636026224.png"
+        },
+        {
+          "id": "i-9be39465994f34",
+          "src": "assets/i-9be39465994f34.png"
+        },
+        {
+          "id": "i-dec1a0091ee5b5",
+          "src": "assets/i-dec1a0091ee5b5.png"
+        }
+      ]
+    },
+    {
+      "id": "c-2f78c8c8118829",
+      "images": [
+        {
+          "id": "i-1854a296194b99",
+          "src": "assets/i-1854a296194b99.png"
+        },
+        {
+          "id": "i-5c36d05acdf3cb",
+          "src": "assets/i-5c36d05acdf3cb.png"
+        },
+        {
+          "id": "i-c1713e610c5b03",
+          "src": "assets/i-c1713e610c5b03.png"
+        }
+      ]
+    },
+    {
+      "id": "c-f808cb07dcd676",
+      "images": [
+        {
+          "id": "i-4d99d63a6ced4f",
+          "src": "assets/i-4d99d63a6ced4f.png"
+        },
+        {
+          "id": "i-d5c1ed4463e5da",
+          "src": "assets/i-d5c1ed4463e5da.png"
+        },
+        {
+          "id": "i-e1051bd2b5bb80",
+          "src": "assets/i-e1051bd2b5bb80.png"
+        }
+      ]
+    },
+    {
+      "id": "c-d72fc2472f0738",
+      "images": [
+        {
+          "id": "i-b1a14871e886d4",
+          "src": "assets/i-b1a14871e886d4.png"
+        },
+        {
+          "id": "i-c6e300d527d7bf",
+          "src": "assets/i-c6e300d527d7bf.png"
+        },
+        {
+          "id": "i-c85b0f68f058cf",
+          "src": "assets/i-c85b0f68f058cf.png"
+        }
+      ]
+    },
+    {
+      "id": "c-cb9ac4bec9b8e8",
+      "images": [
+        {
+          "id": "i-79e3ac9010fffa",
+          "src": "assets/i-79e3ac9010fffa.png"
+        },
+        {
+          "id": "i-b14e2780e02fa4",
+          "src": "assets/i-b14e2780e02fa4.png"
+        },
+        {
+          "id": "i-d701339edd2aab",
+          "src": "assets/i-d701339edd2aab.png"
+        },
+        {
+          "id": "i-fcf0fd252c0c37",
+          "src": "assets/i-fcf0fd252c0c37.png"
+        }
+      ]
+    },
+    {
+      "id": "c-007a031ecc9498",
+      "images": [
+        {
+          "id": "i-049744542fd431",
+          "src": "assets/i-049744542fd431.png"
+        },
+        {
+          "id": "i-38192dd6a8644f",
+          "src": "assets/i-38192dd6a8644f.png"
+        },
+        {
+          "id": "i-f2c75591348d6e",
+          "src": "assets/i-f2c75591348d6e.png"
+        }
+      ]
+    },
+    {
+      "id": "c-9a8e0e2a9ac95e",
+      "images": [
+        {
+          "id": "i-f831a020875db2",
+          "src": "assets/i-f831a020875db2.png"
+        },
+        {
+          "id": "i-fa3ee05f657569",
+          "src": "assets/i-fa3ee05f657569.png"
+        },
+        {
+          "id": "i-fb5f5832bbb0bd",
+          "src": "assets/i-fb5f5832bbb0bd.png"
+        }
+      ]
+    },
+    {
+      "id": "c-ca9199b336e257",
+      "images": [
+        {
+          "id": "i-2563330a51903a",
+          "src": "assets/i-2563330a51903a.png"
+        },
+        {
+          "id": "i-46c64baac2001c",
+          "src": "assets/i-46c64baac2001c.png"
+        },
+        {
+          "id": "i-84cb9f66bb6a25",
+          "src": "assets/i-84cb9f66bb6a25.png"
+        },
+        {
+          "id": "i-bcfcd248aff1c3",
+          "src": "assets/i-bcfcd248aff1c3.png"
+        }
+      ]
+    },
+    {
+      "id": "c-e8ecb8cf62f2d7",
+      "images": [
+        {
+          "id": "i-3bd7b51310b526",
+          "src": "assets/i-3bd7b51310b526.png"
+        },
+        {
+          "id": "i-55f3b44669454d",
+          "src": "assets/i-55f3b44669454d.png"
+        },
+        {
+          "id": "i-8637c03fd97734",
+          "src": "assets/i-8637c03fd97734.png"
+        },
+        {
+          "id": "i-ef2b7a2e251174",
+          "src": "assets/i-ef2b7a2e251174.png"
+        }
+      ]
+    },
+    {
+      "id": "c-3cf3b7f92fbe09",
+      "images": [
+        {
+          "id": "i-9b63cc1fba3ecf",
+          "src": "assets/i-9b63cc1fba3ecf.png"
+        },
+        {
+          "id": "i-b848496c0accd7",
+          "src": "assets/i-b848496c0accd7.png"
+        },
+        {
+          "id": "i-da725d11f09a4a",
+          "src": "assets/i-da725d11f09a4a.png"
+        }
+      ]
+    },
+    {
+      "id": "c-22078be044ca7e",
+      "images": [
+        {
+          "id": "i-6432c1f5ea01fc",
+          "src": "assets/i-6432c1f5ea01fc.png"
+        },
+        {
+          "id": "i-6817be6d3e59ad",
+          "src": "assets/i-6817be6d3e59ad.png"
+        },
+        {
+          "id": "i-eba86a8392b0aa",
+          "src": "assets/i-eba86a8392b0aa.png"
+        },
+        {
+          "id": "i-fe1a22ab1ee0f8",
+          "src": "assets/i-fe1a22ab1ee0f8.png"
+        }
+      ]
+    },
+    {
+      "id": "c-5b2966d3a5e8cc",
+      "images": [
+        {
+          "id": "i-340a182b779d00",
+          "src": "assets/i-340a182b779d00.png"
+        },
+        {
+          "id": "i-995269e0188524",
+          "src": "assets/i-995269e0188524.png"
+        },
+        {
+          "id": "i-b35a9835435380",
+          "src": "assets/i-b35a9835435380.png"
+        },
+        {
+          "id": "i-f9fc14e85fae4a",
+          "src": "assets/i-f9fc14e85fae4a.png"
+        }
+      ]
+    },
+    {
+      "id": "c-82fec1b24d18be",
+      "images": [
+        {
+          "id": "i-1f3f39f46e3c88",
+          "src": "assets/i-1f3f39f46e3c88.png"
+        },
+        {
+          "id": "i-475b91afdbaedb",
+          "src": "assets/i-475b91afdbaedb.png"
+        },
+        {
+          "id": "i-db0968fb363ffe",
+          "src": "assets/i-db0968fb363ffe.png"
+        }
+      ]
+    },
+    {
+      "id": "c-8a4650653657f3",
+      "images": [
+        {
+          "id": "i-12c03d1243997a",
+          "src": "assets/i-12c03d1243997a.png"
+        },
+        {
+          "id": "i-6bf95824649838",
+          "src": "assets/i-6bf95824649838.png"
+        },
+        {
+          "id": "i-f085a8274d88b0",
+          "src": "assets/i-f085a8274d88b0.png"
+        }
+      ]
+    },
+    {
+      "id": "c-ad1d520a006e33",
+      "images": [
+        {
+          "id": "i-2f69f988baa0e5",
+          "src": "assets/i-2f69f988baa0e5.png"
+        },
+        {
+          "id": "i-436ccf13f224ea",
+          "src": "assets/i-436ccf13f224ea.png"
+        },
+        {
+          "id": "i-a9d382420b6514",
+          "src": "assets/i-a9d382420b6514.png"
+        },
+        {
+          "id": "i-b8577dd6b38bfa",
+          "src": "assets/i-b8577dd6b38bfa.png"
+        }
+      ]
+    },
+    {
+      "id": "c-cebdc0769a3292",
+      "images": [
+        {
+          "id": "i-54d3be9693902f",
+          "src": "assets/i-54d3be9693902f.png"
+        },
+        {
+          "id": "i-d7580e2859afad",
+          "src": "assets/i-d7580e2859afad.png"
+        },
+        {
+          "id": "i-f5791e1a48126f",
+          "src": "assets/i-f5791e1a48126f.png"
+        }
+      ]
+    }
+  ]
+}

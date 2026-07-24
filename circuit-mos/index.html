@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152238">
+  <meta name="description" content="匿名电路原理图视觉质量 MOS 评价">
+  <title>电路原理图视觉质量评价</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">Circuit Schematic Visual Study</p>
+        <h1>电路原理图视觉质量评价</h1>
+      </div>
+      <div class="header-status" id="headerStatus">匿名评测</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel intro-panel" id="introView">
+      <div class="intro-copy">
+        <p class="section-kicker">研究说明</p>
+        <h2>请只评价图面的美观与可读性</h2>
+        <p>
+          每个案例包含若干张匿名电路图。请忽略电气功能是否正确，仅根据布局清晰度、
+          连线整洁度、间距与对齐、文字可读性及整体视觉平衡给出 1–5 分。
+        </p>
+      </div>
+
+      <div class="rating-guide" aria-label="评分标准">
+        <div><strong>1</strong><span>很差</span><small>严重拥挤、重叠或难以阅读</small></div>
+        <div><strong>2</strong><span>较差</span><small>明显杂乱，阅读负担较大</small></div>
+        <div><strong>3</strong><span>一般</span><small>基本可读，但布局仍可改进</small></div>
+        <div><strong>4</strong><span>较好</span><small>清晰整洁，视觉组织良好</small></div>
+        <div><strong>5</strong><span>优秀</span><small>布局均衡、连线清楚且易读</small></div>
+      </div>
+
+      <div class="notice">
+        <strong>盲评规则：</strong>
+        图片来源不会显示；案例顺序与同一案例中的图片顺序均会随机化。
+        图片缺失时不会显示，也不会计入评分。
+      </div>
+
+      <form class="setup-form" id="setupForm">
+        <label>
+          <span>受试者编号 <em>可选</em></span>
+          <input id="participantCode" maxlength="40" autocomplete="off"
+                 placeholder="如 P017；请勿填写姓名">
+        </label>
+
+        <label>
+          <span>相关经验</span>
+          <select id="expertise" required>
+            <option value="">请选择</option>
+            <option value="novice">无模拟电路设计经验</option>
+            <option value="student">电子/集成电路相关学生</option>
+            <option value="researcher">相关研究人员</option>
+            <option value="engineer">模拟/集成电路工程师</option>
+            <option value="other">其他相关背景</option>
+          </select>
+        </label>
+
+        <label>
+          <span>本次评价案例数</span>
+          <select id="sessionSize">
+            <option value="10">10 个案例（约 12–18 分钟）</option>
+            <option value="20">20 个案例（约 25–35 分钟）</option>
+            <option value="40" selected>全部 40 个案例（约 45–60 分钟）</option>
+          </select>
+        </label>
+
+        <label class="consent-row">
+          <input type="checkbox" id="consent" required>
+          <span>我理解评分标准，并同意匿名结果用于学术统计。</span>
+        </label>
+
+        <div class="form-actions">
+          <button class="button primary" type="submit" id="startButton">
+            开始匿名评价
+          </button>
+          <button class="button secondary hidden" type="button" id="resumeButton">
+            继续上次进度
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="study-view hidden" id="studyView" aria-live="polite">
+      <div class="study-toolbar">
+        <div>
+          <p class="section-kicker">匿名案例</p>
+          <h2 id="caseTitle">案例</h2>
+        </div>
+        <div class="progress-block">
+          <span id="progressText">1 / 40</span>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="study-reminder">
+        评价视觉呈现，不评价电路功能。点击图片可放大查看。
+      </div>
+
+      <div class="candidate-grid" id="candidateGrid"></div>
+
+      <div class="navigation-bar">
+        <button class="button secondary" type="button" id="backButton">上一案例</button>
+        <p id="completionHint">请为本案例中的每张可用图片评分。</p>
+        <button class="button primary" type="button" id="nextButton" disabled>
+          下一案例
+        </button>
+      </div>
+    </section>
+
+    <section class="panel completion-view hidden" id="completionView">
+      <p class="section-kicker">评价完成</p>
+      <h2>感谢你的参与</h2>
+      <p>
+        结果仅保存在当前浏览器中。请下载 JSON 文件并发送给研究组织者。
+        文件只包含匿名编号、随机顺序、评分与用时，不包含图片来源名称。
+      </p>
+      <div class="completion-stats" id="completionStats"></div>
+      <div class="form-actions">
+        <button class="button primary" type="button" id="downloadButton">
+          下载评价结果 JSON
+        </button>
+        <button class="button secondary" type="button" id="restartButton">
+          清除并重新开始
+        </button>
+      </div>
+      <p class="download-status" id="downloadStatus"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Anonymous MOS study · No score is uploaded automatically</p>
+  </footer>
+
+  <dialog class="image-dialog" id="imageDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="关闭大图">×</button>
+    <img id="dialogImage" alt="放大的匿名电路图">
+  </dialog>
+
+  <noscript>本评价页面需要启用 JavaScript。</noscript>
+  <script src="./app.js" defer></script>
+</body>
+</html>
