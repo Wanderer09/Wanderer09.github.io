@@ -86,6 +86,42 @@ button {
   white-space: nowrap;
 }
 
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.language-switch {
+  display: inline-flex;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+}
+
+.language-button {
+  min-width: 42px;
+  min-height: 30px;
+  padding: 4px 10px;
+  color: #bfcde1;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.language-button:hover {
+  color: white;
+}
+
+.language-button[aria-pressed="true"] {
+  color: var(--navy);
+  background: white;
+}
+
 main {
   width: min(1460px, calc(100% - 40px));
   min-height: calc(100vh - 220px);
@@ -552,6 +588,10 @@ footer {
 
   .header-status {
     display: none;
+  }
+
+  .header-tools {
+    flex-shrink: 0;
   }
 
   main {
