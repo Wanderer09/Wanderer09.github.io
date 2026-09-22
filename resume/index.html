@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Resume | Zhiyuan Wang</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Zhiyuan Wang: education, technical skills, research internships, course projects, and honors." />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/project-detail.css" />
+  </head>
+  <body class="is-preload">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header id="header">
+      <div class="inner">
+        <a href="../index.html" class="image avatar"><img src="../images/avatar.jpg" alt="Zhiyuan Wang" /></a>
+        <h1><strong>Zhiyuan Wang</strong><br />
+          MSECE student at UW<br />
+          Machine learning for EDA<br />
+          Software and computer systems</h1>
+        <nav class="profile-nav" aria-label="Main navigation">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#education">Education</a>
+          <a href="../index.html#three">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <nav class="project-topbar" aria-label="Page navigation"><a class="button" href="../index.html#one">Back to Home</a></nav>
+      <header class="major"><h2>Resume</h2></header><p>Zhiyuan Wang · <a href="mailto:zywang26@uw.edu">zywang26@uw.edu</a> · +1 (206) 751-8139</p><section class="section-panel"><h3>Education</h3><p><strong>University of Washington</strong>  |  Fall 2026 – Present</p><p>M.S. in Electrical &amp; Computer Engineering  |  <em>Seattle, WA</em></p><p><strong>University of Chinese Academy of Sciences (UCAS)</strong>  |  Sep. 2022 – May 2026</p><p>B.Eng. in Computer Science and Technology; GPA: 3.79  |  <em>Beijing, China</em></p><p><strong>University of California, Berkeley</strong>  |  Jan. 2025 – May 2025</p><p>GLOBE Visiting Program, College of Engineering  |  <em>Berkeley, CA</em></p></section><section class="section-panel"><h3>Technical Skills</h3><p><strong>Languages:</strong> Python, C, Verilog </p><p><strong>Tools:</strong> PyTorch, AutoGluon, pytest, Linux, Git, LLVM/Clang, QEMU</p><p><strong>Areas:</strong> Data structures and algorithms, ML pipelines, Bayesian optimization, operating systems, cross-compilation</p></section><section class="section-panel"><h3>Experience</h3><p><strong>Ningbo Institute of Digital Twin; Eastern Institute of Technology (EIT)</strong>  |  Ningbo, China</p><p><em>Research Intern — ML for Analog Circuit Sizing and Design Automation</em>  |  Jun. 2025 – Aug. 2026</p><ul class="detail-list"><li>Built a YAML-configured Python pipeline for SAR-ADC performance modeling across <strong>9 circuit/process tasks</strong>, integrating PyTorch MLPs and AutoGluon with preprocessing, per-target evaluation, and model persistence.</li><li>Implemented inference with saved preprocessing, prediction/error visualizations, and pytest workflow checks for training and generated artifacts.</li><li>Evaluated virtual-outlier training for optimization-induced distribution shift, achieving <strong>0.991 OOD-detection AUC</strong>; compared source-only, target-only, and mixed-data training for cross-process transfer.</li><li>Co-authored <strong>SP-BO</strong> (<strong>ISEDA</strong>, accepted) and <strong>AMSchem</strong> (<strong>AAAI 2027</strong>, under review), covering simulation pruning for analog sizing and automated netlist-to-schematic generation.</li></ul><p><strong>Institute of Computing Technology, Chinese Academy of Sciences</strong>  |  Beijing, China</p><p><em>Research Intern — BDD Variable-Ordering Optimization</em>  |  Mar. 2025 – Aug. 2025</p><ul class="detail-list"><li>Co-developed BDD variable-ordering search with GA, CMA-ES, and TPE; connected Python optimizers to an existing C++ evaluator through subprocess calls and JSON logs, with timeout handling and failed-evaluation penalties.</li><li>Evaluated local TPE using adjacent swaps around a fixed greedy ordering; a recorded 32-bit adder experiment reduced split nodes from <strong>2,512 to 1,333 (46.9%)</strong> within 1,000 trials.</li></ul><p><strong>Institute of Computing Technology, Chinese Academy of Sciences</strong>  |  Beijing, China</p><p><em>Research Intern — AOSP / LLVM Toolchain for LoongArch</em>  |  Jul. 2024 – Aug. 2024</p><ul class="detail-list"><li>Investigated Soong module/API conflicts and Clang option incompatibilities during an AOSP toolchain upgrade; built LLVM/Clang from source to include the missing LoongArch target.</li><li>Built an ABI 2.0 kernel and updated Linux UAPI headers and Bionic assembly for LoongArch; resolved three reported BoringSSL build errors and investigated remaining ART architecture and atomic-operation failures.</li></ul></section><section class="section-panel"><h3>Selected Projects</h3><p><strong>RISC-V Operating System Kernel — C / RISC-V Assembly</strong>  |  Sep. 2024 – Dec. 2024</p><p><em>UCAS Operating Systems Course Project</em></p><ul class="detail-list"><li>Extended a course-provided teaching kernel with task scheduling, context switching, system calls, and process control; implemented synchronization and IPC mechanisms, including condition variables and mailboxes.</li></ul><p><strong>Five-Stage LoongArch CPU — Verilog</strong>  |  Sep. 2024 – Dec. 2024</p><p><em>UCAS Computer Architecture Course Project</em></p><ul class="detail-list"><li>Collaborated on a pipelined CPU; implemented exception handling and TLB exception paths, and integrated SRAM-like/AXI control, D-cache, and uncached accesses. Helped trace intermittent FPGA failures to stale fetch-buffer state after exceptions.</li></ul></section><section class="section-panel"><h3>Leadership &amp; Honors</h3><p><strong>Vice President</strong>, UCAS Student Union (2024–2025); University Merit Student (2023, 2024, 2025).</p><p><strong>Second Prize</strong>, China Postgraduate IC Innovation Competition, EDA Elite Challenge Contest (2025).</p></section>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="https://github.com/Wanderer09" class="icon brands fa-github" aria-label="GitHub"><span class="label">GitHub</span></a></li>
+          <li><a href="mailto:zywang26@uw.edu" class="icon solid fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
+          <li><a href="../resume/" class="icon solid fa-file-alt" aria-label="Resume"><span class="label">Resume</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Zhiyuan Wang</li>
+          <li>Design base: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.poptrox.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
