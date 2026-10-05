@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>AOSP / LLVM for LoongArch | Zhiyuan Wang</title>
+    <title>AOSP / LLVM for LoongArch | Steven (Zhiyuan) Wang</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Research internship on LLVM/Clang, Soong, kernel interfaces, and Android runtime compatibility for LoongArch." />
@@ -12,13 +12,14 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="header">
       <div class="inner">
-        <a href="../../index.html" class="image avatar"><img src="../../images/avatar.jpg" alt="Zhiyuan Wang" /></a>
-        <h1><strong>Zhiyuan Wang</strong><br />
-          MSECE student at UW<br />
-          Machine learning for EDA<br />
-          Software and computer systems</h1>
+        <a href="../../index.html" class="image avatar"><img src="../../images/avatar.jpg" alt="Steven (Zhiyuan) Wang" /></a>
+        <h1><strong>Steven Wang</strong><br />
+          Electrical &amp; Computer Engineering<br />
+          University of Washington<br />
+          Machine learning · Circuits · Systems</h1>
         <nav class="profile-nav" aria-label="Main navigation">
           <a href="../../index.html#projects">Projects</a>
+          <a href="../../index.html#research">Research</a>
           <a href="../../index.html#education">Education</a>
           <a href="../../index.html#three">Contact</a>
         </nav>
@@ -26,8 +27,8 @@
     </header>
     <main id="main">
       <nav class="project-topbar" aria-label="Page navigation"><a class="button" href="../../index.html#projects">Back to Home</a></nav>
-      <div class="project-hero"><div class="project-banner" style="background-image: url('../../images/bg.jpg');">
-      <div class="project-banner-inner"><div class="project-kicker">ICT, Chinese Academy of Sciences · Jul.–Aug. 2024</div>
+      <div class="project-hero"><div class="project-banner">
+      <div class="project-banner-inner"><div class="project-kicker">Loongson Technology Corporation Limited · Jul.–Aug. 2024</div>
       <h2>AOSP / LLVM for LoongArch</h2><p class="project-subtitle">Investigating a compiler-toolchain upgrade and system compatibility on an existing LoongArch Android port.</p></div></div></div><ul class="chip-list"><li>LLVM/Clang</li><li>Soong</li><li>Linux</li><li>Cross-compilation</li><li>Bionic</li><li>LoongArch64</li></ul><section class="section-panel"><h3>Following a failure across the software stack</h3><ol class="process-flow"><li><strong>Build configuration</strong><span>Soong modules, APIs, and toolchain selection.</span></li><li><strong>Compiler target</strong><span>Options and LoongArch backend support.</span></li><li><strong>System interfaces</strong><span>Kernel ABI, Linux UAPI, and Bionic.</span></li><li><strong>Runtime</strong><span>BoringSSL and ART architecture assumptions.</span></li></ol></section><section class="section-panel"><h3>My contribution</h3><ul class="detail-list"><li>Investigated duplicate Soong modules and API mismatches when integrating newer toolchain components.</li><li>Compared Clang option support and built LLVM/Clang from source to include the missing LoongArch target.</li><li>Built an ABI 2.0 kernel, regenerated Linux UAPI headers, and updated Bionic assembly for LoongArch.</li><li>Resolved three BoringSSL build errors recorded in my weekly reports and investigated remaining ART architecture and atomic-operation failures.</li></ul></section><section class="section-panel"><h3>Engineering lesson</h3><p>A compiler upgrade is a dependency problem across the build system, target support, headers, and runtime libraries. With guidance from colleagues, I narrowed changes to the necessary toolchain components and separated failures by build stage, making the source of each incompatibility easier to isolate.</p></section><section class="section-panel"><h3>Outcome</h3><p>The work advanced target support and resolved specific build blockers on top of an existing port. Remaining ART and runtime issues meant the upgraded AOSP build was not fully validated end to end.</p></section>
     </main>
     <footer id="footer">
@@ -38,7 +39,7 @@
           <li><a href="../../resume/" class="icon solid fa-file-alt" aria-label="Resume"><span class="label">Resume</span></a></li>
         </ul>
         <ul class="copyright">
-          <li>&copy; Zhiyuan Wang</li>
+          <li>&copy; Steven (Zhiyuan) Wang</li>
           <li>Design base: <a href="https://html5up.net">HTML5 UP</a></li>
         </ul>
       </div>

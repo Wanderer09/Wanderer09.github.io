@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>RISC-V OS Kernel | Zhiyuan Wang</title>
+    <title>RISC-V OS Kernel | Steven (Zhiyuan) Wang</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="C and RISC-V assembly course project: scheduling, context switching, process control, synchronization, and IPC." />
@@ -12,13 +12,14 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="header">
       <div class="inner">
-        <a href="../../index.html" class="image avatar"><img src="../../images/avatar.jpg" alt="Zhiyuan Wang" /></a>
-        <h1><strong>Zhiyuan Wang</strong><br />
-          MSECE student at UW<br />
-          Machine learning for EDA<br />
-          Software and computer systems</h1>
+        <a href="../../index.html" class="image avatar"><img src="../../images/avatar.jpg" alt="Steven (Zhiyuan) Wang" /></a>
+        <h1><strong>Steven Wang</strong><br />
+          Electrical &amp; Computer Engineering<br />
+          University of Washington<br />
+          Machine learning · Circuits · Systems</h1>
         <nav class="profile-nav" aria-label="Main navigation">
           <a href="../../index.html#projects">Projects</a>
+          <a href="../../index.html#research">Research</a>
           <a href="../../index.html#education">Education</a>
           <a href="../../index.html#three">Contact</a>
         </nav>
@@ -26,7 +27,7 @@
     </header>
     <main id="main">
       <nav class="project-topbar" aria-label="Page navigation"><a class="button" href="../../index.html#projects">Back to Home</a></nav>
-      <div class="project-hero"><div class="project-banner" style="background-image: url('../../images/bg-shenzhen.jpg');">
+      <div class="project-hero"><div class="project-banner">
       <div class="project-banner-inner"><div class="project-kicker">UCAS operating systems course · Sep.–Dec. 2024</div>
       <h2>RISC-V Operating System Kernel</h2><p class="project-subtitle">Extending a course-provided teaching kernel in C and RISC-V assembly, from program loading to scheduling and inter-process communication.</p></div></div></div><div class="stat-grid"><div class="stat-card"><span class="stat-value">C + ASM</span><span class="stat-label">Implementation</span></div><div class="stat-card"><span class="stat-value">RISC-V</span><span class="stat-label">Target architecture</span></div><div class="stat-card"><span class="stat-value">IPC</span><span class="stat-label">Mailboxes &amp; synchronization</span></div><div class="stat-card"><span class="stat-value">QEMU</span><span class="stat-label">Course development environment</span></div></div><ul class="chip-list"><li>Context switching</li><li>Timer interrupts</li><li>System calls</li><li>Process control</li><li>Condition variables</li><li>GDB</li></ul><section class="section-panel"><h3>System-call path</h3><ol class="process-flow"><li><strong>User task</strong><span>ecall enters the kernel with a call number and arguments.</span></li><li><strong>Trap entry</strong><span>Assembly saves the register context.</span></li><li><strong>Kernel service</strong><span>C code dispatches the call and updates task state.</span></li><li><strong>Return</strong><span>Write back the result and advance sepc.</span></li></ol></section><section class="section-panel"><h3>What I implemented</h3><ul class="detail-list"><li>ELF image construction, task metadata, and program-loading logic.</li><li>Ready/sleep queues, task scheduling, timer-interrupt handling, and RISC-V context switching.</li><li>System-call dispatch and process-control operations: exec, exit, kill, and waitpid; shell commands for interacting with tasks.</li><li>Synchronization and communication mechanisms, including barriers, condition variables, and mailboxes.</li></ul></section><section class="section-panel"><h3>Working across C and assembly</h3><p>Trap entry saves the interrupted register state, while the context-switch routine preserves the callee-saved state needed by the calling convention. The C side manages queues, process state, and kernel services.</p><p>One critical interface is the system-call handler: it reads the call number and arguments from the saved context, dispatches the service, writes the return value, and advances the saved program counter so the same ecall is not executed again.</p></section><section class="section-panel"><h3>Scope and remaining work</h3><p>The project extends course starter code and uses the course toolchain, QEMU, and GDB workflow. Later branches explore multicore support and Sv39 virtual memory, but retain unfinished scheduler-lock and memory-management changes. Filesystem and networking notes describe later course work; they are not presented here as completed implementations.</p></section>
     </main>
@@ -38,7 +39,7 @@
           <li><a href="../../resume/" class="icon solid fa-file-alt" aria-label="Resume"><span class="label">Resume</span></a></li>
         </ul>
         <ul class="copyright">
-          <li>&copy; Zhiyuan Wang</li>
+          <li>&copy; Steven (Zhiyuan) Wang</li>
           <li>Design base: <a href="https://html5up.net">HTML5 UP</a></li>
         </ul>
       </div>

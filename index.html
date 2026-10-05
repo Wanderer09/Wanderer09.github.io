@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>Homepage | Zhiyuan Wang</title>
+    <title>Steven (Zhiyuan) Wang | Homepage</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Zhiyuan Wang, UW MSECE student. Education, research, and projects in machine learning for EDA and computer systems." />
+    <meta name="description" content="Steven (Zhiyuan) Wang, UW ECE master's student. Research and projects in machine learning, circuit design automation, and computer systems." />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/project-detail.css" />
   </head>
@@ -12,13 +12,14 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="header">
       <div class="inner">
-        <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Zhiyuan Wang" /></a>
-        <h1><strong>Zhiyuan Wang</strong><br />
-          MSECE student at UW<br />
-          Machine learning for EDA<br />
-          Software and computer systems</h1>
+        <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Steven (Zhiyuan) Wang" /></a>
+        <h1><strong>Steven Wang</strong><br />
+          Electrical &amp; Computer Engineering<br />
+          University of Washington<br />
+          Machine learning · Circuits · Systems</h1>
         <nav class="profile-nav" aria-label="Main navigation">
           <a href="index.html#projects">Projects</a>
+          <a href="index.html#research">Research</a>
           <a href="index.html#education">Education</a>
           <a href="index.html#three">Contact</a>
         </nav>
@@ -27,26 +28,40 @@
     <main id="main">
 
       <section id="one">
-  <header class="major"><h2>Building software for learning and engineering.</h2></header>
-  <p>I am a Master of Science in Electrical &amp; Computer Engineering (MSECE) student at the University of Washington, entering in Fall 2026. I earned my B.Eng. in Computer Science and Technology at the University of Chinese Academy of Sciences in May 2026.</p>
-  <p>My work connects machine learning with electronic design automation: configurable modeling pipelines, evaluation under distribution shift, and data-efficient circuit design. I also enjoy working across operating systems, processor architecture, and compiler toolchains.</p>
+  <p class="intro-label">Steven (Zhiyuan) Wang · Seattle, WA</p>
+  <header class="major"><h2>Machine learning, circuits,<br />and computer systems.</h2></header>
+  <p>I am an M.S. student in Electrical &amp; Computer Engineering at the University of Washington, with expected graduation in March 2028. I earned my B.Eng. in Computer Science and Technology at the University of Chinese Academy of Sciences and attended UC Berkeley's GLOBE Visiting Program in Spring 2025.</p>
+  <p>My research experience includes circuit performance prediction, model reliability under distribution shift, and optimization for electronic design automation (EDA). My project work also spans processor design, operating systems, and compiler toolchains. This site brings together the problems I have worked on, my contributions, and the results.</p>
   <ul class="actions"><li><a href="#projects" class="button">Explore Projects</a></li><li><a href="resume/" class="button">View Resume</a></li></ul>
+  <div class="focus-grid" aria-label="Areas of work">
+    <article class="focus-area"><span class="focus-number">01</span><h3>Machine Learning &amp; Optimization</h3><p>Surrogate modeling, distribution shift, Bayesian optimization, and heuristic search.</p></article>
+    <article class="focus-area"><span class="focus-number">02</span><h3>Circuits &amp; Design Automation</h3><p>Analog sizing, simulation pruning, and netlist-to-schematic generation.</p></article>
+    <article class="focus-area"><span class="focus-number">03</span><h3>Computer Architecture &amp; Systems</h3><p>Pipelined processors, operating systems, and support for the LoongArch architecture.</p></article>
+  </div>
 </section>
-<section id="projects"><h2>Projects</h2><p>Research and course projects, with a focus on what I built, how it works, and what the results show.</p><div class="row"><article class="col-6 col-12-xsmall work-item">
-      <a class="project-tile tile-ml" href="projects/saradc-surrogate/" aria-label="Read about SAR-ADC Surrogate Modeling"><span>ML / EDA · Undergraduate thesis</span><strong>Data → Models</strong><span>Explore project &rarr;</span></a>
-      <h3><a href="projects/saradc-surrogate/">SAR-ADC Surrogate Modeling</a></h3><p>A Python modeling pipeline spanning 9 circuit/process tasks, with OOD detection and cross-process transfer experiments.</p></article><article class="col-6 col-12-xsmall work-item">
-      <a class="project-tile tile-os" href="projects/riscv-kernel/" aria-label="Read about RISC-V Operating System Kernel"><span>Systems · UCAS course project</span><strong>Trap → Schedule</strong><span>Explore project &rarr;</span></a>
-      <h3><a href="projects/riscv-kernel/">RISC-V Operating System Kernel</a></h3><p>C and RISC-V assembly for scheduling, context switching, system calls, process control, and synchronization in a teaching kernel.</p></article><article class="col-6 col-12-xsmall work-item">
-      <a class="project-tile tile-cpu" href="projects/loongarch-cpu/" aria-label="Read about LoongArch32 Pipelined CPU"><span>Architecture · UCAS course project</span><strong>IF → ID → EX → MEM → WB</strong><span>Explore project &rarr;</span></a>
-      <h3><a href="projects/loongarch-cpu/">LoongArch32 Pipelined CPU</a></h3><p>A five-stage Verilog CPU developed through individual labs and team integration, including exceptions, AXI control, and cache access.</p></article><article class="col-6 col-12-xsmall work-item">
-      <a class="project-tile tile-toolchain" href="projects/aosp-loongarch/" aria-label="Read about AOSP / LLVM for LoongArch"><span>Systems · Research internship</span><strong>Compiler → Runtime</strong><span>Explore project &rarr;</span></a>
-      <h3><a href="projects/aosp-loongarch/">AOSP / LLVM for LoongArch</a></h3><p>Toolchain compatibility analysis and architecture support across LLVM/Clang, Soong, Linux UAPI, Bionic, and ART.</p></article></div></section>
+<section id="projects"><h2>Selected Projects</h2><p>Research, hardware, and systems work. Each project describes its context, my role, and the evidence behind its results.</p><div class="row"><article class="col-6 col-12-xsmall work-item">
+      <a class="project-tile tile-ml" href="projects/saradc-surrogate/" aria-label="Read about SAR-ADC Surrogate Modeling"><span>ML for EDA · Undergraduate thesis</span><strong>Circuit parameters → Performance</strong><span>Explore project &rarr;</span></a>
+      <h3><a href="projects/saradc-surrogate/">SAR-ADC Surrogate Modeling</a></h3><p>Predicting analog circuit performance from simulation data, with experiments on out-of-distribution detection and transfer across process nodes.</p></article><article class="col-6 col-12-xsmall work-item">
+      <a class="project-tile tile-os" href="projects/riscv-kernel/" aria-label="Read about RISC-V Operating System Kernel"><span>Operating systems · UCAS course project</span><strong>Tasks → Scheduling → Communication</strong><span>Explore project &rarr;</span></a>
+      <h3><a href="projects/riscv-kernel/">RISC-V Operating System Kernel</a></h3><p>A teaching kernel in C and RISC-V assembly: task scheduling, system calls, process management, synchronization, and mailbox communication.</p></article><article class="col-6 col-12-xsmall work-item">
+      <a class="project-tile tile-cpu" href="projects/loongarch-cpu/" aria-label="Read about LoongArch32 Pipelined CPU"><span>Digital hardware · UCAS course project</span><strong>IF → ID → EX → MEM → WB</strong><span>Explore project &rarr;</span></a>
+      <h3><a href="projects/loongarch-cpu/">LoongArch32 Pipelined CPU</a></h3><p>A five-stage Verilog processor with data forwarding, exception handling, and data-cache integration, developed through individual labs and team work.</p></article><article class="col-6 col-12-xsmall work-item">
+      <a class="project-tile tile-toolchain" href="projects/aosp-loongarch/" aria-label="Read about AOSP / LLVM for LoongArch"><span>Systems software · Loongson internship</span><strong>Architecture → Toolchain → Runtime</strong><span>Explore project &rarr;</span></a>
+      <h3><a href="projects/aosp-loongarch/">AOSP / LLVM for LoongArch</a></h3><p>Architecture support and compatibility work across the compiler, Android build system, and core libraries during a toolchain upgrade.</p></article></div></section>
+<section id="research">
+  <h2>Collaborative Research</h2>
+  <p>Alongside my thesis, I have contributed to research on analog circuit optimization and schematic generation at BTD Technology.</p>
+  <div class="research-grid">
+    <a class="research-card" href="research/#sp-bo"><span class="entry-date">SP-BO · ISEDA 2026 · Co-author</span><h3>Simulation pruning for circuit sizing</h3><p>A Bayesian optimization framework for analog circuit sizing that uses simulation pruning.</p><span>Research overview &rarr;</span></a>
+    <a class="research-card" href="research/#amschem"><span class="entry-date">AMSchem · Research contribution</span><h3>From netlists to schematics</h3><p>A verifier-guided agentic framework using structured representations and iterative visual refinement.</p><span>Research overview &rarr;</span></a>
+  </div>
+</section>
 <section id="education"><h2>Education</h2><div class="education-grid">
-  <a class="education-card" href="education/uw/"><span class="entry-date">Fall 2026 – Present · Seattle</span><h3>University of Washington</h3><p>M.S. in Electrical &amp; Computer Engineering<br />Professional Master's Program</p><span>Program details &rarr;</span></a>
+  <a class="education-card" href="education/uw/"><span class="entry-date">Fall 2026 – Expected Mar. 2028 · Seattle</span><h3>University of Washington</h3><p>M.S. in Electrical &amp; Computer Engineering</p><span>Program details &rarr;</span></a>
   <a class="education-card" href="education/ucas/"><span class="entry-date">Sep. 2022 – May 2026 · Beijing</span><h3>University of Chinese Academy of Sciences</h3><p>B.Eng. in Computer Science and Technology<br />GPA: 3.79</p><span>Education, honors &amp; leadership &rarr;</span></a>
   <a class="education-card" href="education/berkeley/"><span class="entry-date">Jan. 2025 – May 2025 · Berkeley</span><h3>University of California, Berkeley</h3><p>GLOBE Visiting Program<br />College of Engineering</p><span>Visiting program &rarr;</span></a>
 </div></section>
-<section id="three"><h2>Contact</h2><p>Feel free to get in touch to discuss my projects, exchange ideas, or explore research collaborations.</p>
+<section id="three"><h2>Contact</h2><p>Get in touch to discuss research, engineering projects, or internship opportunities.</p>
   <ul class="labeled-icons">
     <li><h3 class="icon solid fa-envelope" aria-label="Email"><span class="label">Email</span></h3><a href="mailto:zywang26@uw.edu">zywang26@uw.edu</a></li>
     <li><h3 class="icon brands fa-github" aria-label="GitHub"><span class="label">GitHub</span></h3><a href="https://github.com/Wanderer09">github.com/Wanderer09</a></li>
@@ -62,7 +77,7 @@
           <li><a href="resume/" class="icon solid fa-file-alt" aria-label="Resume"><span class="label">Resume</span></a></li>
         </ul>
         <ul class="copyright">
-          <li>&copy; Zhiyuan Wang</li>
+          <li>&copy; Steven (Zhiyuan) Wang</li>
           <li>Design base: <a href="https://html5up.net">HTML5 UP</a></li>
         </ul>
       </div>
