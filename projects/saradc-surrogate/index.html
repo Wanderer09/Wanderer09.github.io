@@ -4,11 +4,13 @@
     <title>SAR-ADC Surrogate Modeling | Steven (Zhiyuan) Wang</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Data-driven analog circuit performance prediction, model reliability under distribution shift, and cross-process transfer." />
+    <meta name="description" content="An interactive look at learning from SPICE simulations to predict SAR-ADC circuit performance from device sizes." />
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/project-detail.css" />
+    <link rel="stylesheet" href="../../assets/css/project-visual.css" />
+    <link rel="stylesheet" href="../../assets/css/saradc-showcase.css" />
   </head>
-  <body class="is-preload">
+  <body class="is-preload pv-project pv-sar sar-showcase">
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="header">
       <div class="inner">
@@ -27,12 +29,80 @@
     </header>
     <main id="main">
       <nav class="project-topbar" aria-label="Page navigation"><a class="button" href="../../index.html#projects">Back to Home</a></nav>
-      <div class="project-hero"><div class="project-banner" style="background-image: url('../../images/projects/saradc/pipeline.png');">
-      <div class="project-banner-inner"><div class="project-kicker">Undergraduate thesis · ML for EDA</div>
-      <h2>SAR-ADC Surrogate Modeling</h2><p class="project-subtitle">Learning circuit performance from historical SPICE data, then examining reliability under optimization-induced distribution shift and process changes.</p></div></div></div><div class="stat-grid"><div class="stat-card"><span class="stat-value">9</span><span class="stat-label">Circuit/process tasks</span></div><div class="stat-card"><span class="stat-value">21</span><span class="stat-label">Performance metrics</span></div><div class="stat-card"><span class="stat-value">0.991</span><span class="stat-label">OOD-detection AUC</span></div><div class="stat-card"><span class="stat-value">3</span><span class="stat-label">Process nodes</span></div></div><ul class="chip-list"><li>Python</li><li>PyTorch</li><li>AutoGluon</li><li>Analog circuit modeling</li><li>OOD detection</li><li>Transfer learning</li></ul><section class="section-panel"><h3>Context and my contribution</h3><p>This undergraduate thesis grew from SAR-ADC modeling work during my research internship at BTD Technology (Jun. 2025–Present). I built and extended a configurable Python workflow for training, evaluating, saving, and using surrogate models.</p><p>The study covers comparator, bootstrap, and op-amp tasks across TSMC28, TSMC22, and SMIC28 data. I integrated existing model libraries and implemented neural-network training and supporting workflow code.</p></section><section class="section-panel"><h3>From a task configuration to a prediction</h3><ol class="process-flow"><li><strong>Configure</strong><span>YAML specifies inputs, targets, model, and data paths.</span></li><li><strong>Prepare</strong><span>Split data, fit preprocessing, and retain transforms.</span></li><li><strong>Train &amp; evaluate</strong><span>Compare models and inspect per-target errors.</span></li><li><strong>Save &amp; infer</strong><span>Reload models and preprocessing for predictions.</span></li></ol></section><section class="section-panel"><h3>Modeling and experimental workflow</h3><ul class="detail-list"><li>Implemented PyTorch MLP and AutoGluon training paths with per-target evaluation and saved model artifacts.</li><li>Added inference that reuses training-time preprocessing, plus prediction and error visualizations.</li><li>Wrote pytest workflow checks for training, inference, and generated artifacts.</li><li>Compared source-only, target-only, and mixed-data training for cross-process transfer.</li></ul></section><section class="section-panel"><h3>Results and tradeoffs</h3><div class="table-wrapper"><table><caption>TabPFN circuit-family average R² in the thesis’s fixed-split offline comparison</caption><thead><tr><th scope="col">Circuit family</th><th scope="col">Average R²</th></tr></thead><tbody><tr><td>Comparator</td><td>0.9893</td></tr><tr><td>Bootstrap</td><td>0.9698</td></tr><tr><td>Op-amp</td><td>0.7854</td></tr></tbody></table></div>
-<p>Virtual-outlier training reached an OOD-detection AUC of <strong>0.991</strong>. OOD detection improved over the EllipticEnvelope baseline, while ID accuracy decreased; total classification accuracy was unchanged at 0.9143. Real OOD validation data was used for model selection.</p>
-<p>Cross-process experiments used 128 target training samples. Mixing source and target data helped correct transfer bias, but the preferred training method varied by output metric.</p>
-<p class="project-highlight">These are offline modeling and reliability experiments. End-to-end savings in SPICE calls and closed-loop sizing time remain future evaluation work.</p></section><section class="section-panel"><h3>Related research</h3><p>I co-authored <strong>SP-BO</strong> (ISEDA 2026), on simulation pruning for analog circuit sizing, and contributed to <strong>AMSchem</strong>, on verifier-guided netlist-to-schematic generation. <a href="../../research/">Read about these collaborative works &rarr;</a></p></section><div class="figure-grid"><figure class="project-figure"><a href="../../images/projects/saradc/pipeline.png"><img loading="lazy" src="../../images/projects/saradc/pipeline.png" alt="Automated circuit-modeling workflow" /></a><figcaption>Thesis workflow: preprocessing, model training, evaluation, and inference.</figcaption></figure><figure class="project-figure"><a href="../../images/projects/saradc/avg-r2-bar.png"><img loading="lazy" src="../../images/projects/saradc/avg-r2-bar.png" alt="Average R-squared comparison across surrogate models" /></a><figcaption>Offline average R² comparison from the thesis; this measures predictive fit, not deployment speed.</figcaption></figure><figure class="project-figure"><a href="../../images/projects/saradc/r2-heatmap.png"><img loading="lazy" src="../../images/projects/saradc/r2-heatmap.png" alt="R-squared by model and circuit task" /></a><figcaption>Task-level results across circuits and process nodes. The variation motivates per-target evaluation.</figcaption></figure></div>
+      <div class="pv-hero">
+        <p class="pv-kicker">SAR-ADC · Machine learning for circuit design</p>
+        <div class="pv-hero-grid">
+          <div>
+            <h2>A circuit preview, <br />learned from simulation.</h2>
+            <p class="pv-intro">Turn past circuit simulations into a model that estimates how a new design might behave, just from its device sizes.</p>
+          </div>
+          <figure class="pv-hero-art">
+            <svg viewBox="0 0 300 180" role="img" aria-label="Device sizes feed a learned model to estimate circuit performance">
+              <rect x="12" y="48" width="63" height="84" rx="5" />
+              <path d="M26 72h13m0-11v22m6-22v22m0-11h16M26 106h10l6-10 7 20 7-10h5" />
+              <path class="pv-gold" d="M80 90h29m-5-5 5 5-5 5M190 90h29m-5-5 5 5-5 5" />
+              <rect x="116" y="48" width="68" height="84" rx="5" />
+              <path d="M133 69l33 21-33 21m33-42-33 21 33 21M133 69v42m33-42v42" opacity=".5" />
+              <g class="pv-fill"><circle cx="133" cy="69" r="4" /><circle cx="133" cy="90" r="4" /><circle cx="133" cy="111" r="4" /><circle cx="166" cy="69" r="4" /><circle cx="166" cy="90" r="4" /><circle cx="166" cy="111" r="4" /></g>
+              <path d="M230 56v68h59" /><path class="pv-gold" d="M236 104h15v-30h35" />
+            </svg>
+            <figcaption>Device sizes → Learned model → Performance</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <section class="pv-section">
+        <div class="pv-heading sar-heading"><div><span class="pv-eyebrow">Explore the idea</span><h3>What would this design do?</h3></div></div>
+        <p class="sar-lead">Choose a building block inside an analog-to-digital converter.</p>
+        <div class="sar-explorer" data-sar-explorer>
+          <div class="sar-choices" role="group" aria-label="Circuit building block">
+            <button type="button" class="pv-control sar-choice" data-circuit="comparator" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v16l14-8zM2 8h4M2 16h4M20 12h3" /></svg>Comparator</button>
+            <button type="button" class="pv-control sar-choice" data-circuit="bootstrap" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8h6l6-5m0 5h8M18 8v5m-4 0h8m-8 4h8m-4 0v5" /></svg>Bootstrap</button>
+            <button type="button" class="pv-control sar-choice" data-circuit="opamp" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18l15-9zM1 8h5M1 16h5M21 12h3M9 7v4m-2-2h4M7 16h4" /></svg>Op-amp</button>
+          </div>
+          <div class="sar-scene">
+            <div class="sar-station">
+              <span class="sar-station-label">01 / Your design</span>
+              <div class="sar-visual"><svg viewBox="0 0 120 112" aria-hidden="true"><path data-circuit-symbol d="M35 32 L35 80 L87 56 Z M20 43 H35 M20 69 H35 M87 56 H105 M25 39 V47 M21 43 H29 M21 69 H29" /><path class="sar-input-size" d="M25 14h70m-70-4v8m70-8v8M11 27v58m-4-58h8m-8 58h8" /></svg></div>
+              <h4 data-input-title>Transistor sizes</h4>
+              <p data-input-params>Widths &amp; lengths</p>
+            </div>
+            <div class="sar-station">
+              <span class="sar-station-label">02 / Learned mapping</span>
+              <div class="sar-visual sar-model-visual"><svg viewBox="0 0 120 112" aria-hidden="true"><path d="M30 18h60m-60 6h38m-38 6h60" opacity=".5" /><path class="sar-data-link" d="M60 36v16M6 80h19m70 0h19" /><path d="M32 61l28 19-28 19m28-38L32 80l28 19m0-38 28 19-28 19m28-38L60 80l28 19" opacity=".5" /><g class="sar-model-dot"><circle cx="32" cy="61" r="3" /><circle cx="32" cy="80" r="3" /><circle cx="32" cy="99" r="3" /><circle cx="60" cy="61" r="3" /><circle cx="60" cy="80" r="3" /><circle cx="60" cy="99" r="3" /><circle cx="88" cy="61" r="3" /><circle cx="88" cy="80" r="3" /><circle cx="88" cy="99" r="3" /></g></svg></div>
+              <h4>A learned model</h4>
+              <p>Trained on past SPICE runs</p>
+            </div>
+            <div class="sar-station">
+              <span class="sar-station-label">03 / A performance preview</span>
+              <div class="sar-visual"><svg viewBox="0 0 120 112" aria-hidden="true"><path d="M12 18v76h98" opacity=".25" /><path data-signal-guide d="M14 88 H32 V46 H108" stroke-dasharray="3 5" opacity=".35" /><path data-signal d="M14 76 H48 V34 H108" stroke-width="2.2" /></svg></div>
+              <h4 data-output-title>Decision speed</h4>
+              <p data-output-target>Propagation delay</p>
+            </div>
+          </div>
+          <p class="sar-question"><strong data-question>How quickly will this comparator make a decision?</strong></p>
+        </div>
+        <div class="sar-demo-footer">
+          <button type="button" class="pv-control sar-replay" data-trace>Trace the prediction →</button>
+          <p>Concept illustration · signal shapes are illustrative.</p>
+        </div>
+        <span class="sr-only" role="status" data-trace-status>Comparator: transistor sizes go in; estimated decision delay comes out.</span>
+        <noscript><p class="pv-footnote">The comparator example is shown above. Enable JavaScript to explore the other circuits.</p></noscript>
+      </section>
+
+      <section class="pv-section sar-explainer">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="5" width="12" height="12" rx="2" /><rect x="25" y="23" width="12" height="12" rx="2" /><path d="M9 17v12h16m-5-4 5 4-5 4M15 11h16v12" /></svg>
+        <div>
+          <h3>I built the bridge from simulation data to predictions.</h3>
+          <p>A reusable workflow to train and use these models, plus experiments on when predictions become unreliable and how to adapt them to another fabrication process.</p>
+          <ul class="sar-tool-list" aria-label="Tools"><li>Python</li><li>PyTorch</li><li>AutoGluon</li></ul>
+        </div>
+      </section>
+      <details class="pv-details">
+        <summary>A little more context</summary>
+        <p>This undergraduate thesis grew from my research internship at BTD Technology. I developed the training, evaluation, and inference workflow for SAR-ADC building blocks, and studied out-of-distribution detection and cross-process transfer. The work evaluates offline predictors; a complete automatic circuit-sizing system is a further step.</p>
+        <p><a href="../../research/">Related research: SP-BO &amp; AMSchem →</a></p>
+      </details>
     </main>
     <footer id="footer">
       <div class="inner">
@@ -53,5 +123,6 @@
     <script src="../../assets/js/breakpoints.min.js"></script>
     <script src="../../assets/js/util.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/saradc-showcase.js"></script>
   </body>
 </html>

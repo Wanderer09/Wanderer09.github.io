@@ -4,11 +4,13 @@
     <title>AOSP / LLVM for LoongArch | Steven (Zhiyuan) Wang</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Research internship on LLVM/Clang, Soong, kernel interfaces, and Android runtime compatibility for LoongArch." />
+    <meta name="description" content="Android toolchain migration for LoongArch, with iterative builds and integration across LLVM/Clang, AOSP and core system libraries." />
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/project-detail.css" />
+    <link rel="stylesheet" href="../../assets/css/aosp-project.css" />
+    <script src="../../assets/js/aosp-project.js" defer></script>
   </head>
-  <body class="is-preload">
+  <body class="is-preload aosp-project">
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="header">
       <div class="inner">
@@ -27,9 +29,82 @@
     </header>
     <main id="main">
       <nav class="project-topbar" aria-label="Page navigation"><a class="button" href="../../index.html#projects">Back to Home</a></nav>
-      <div class="project-hero"><div class="project-banner">
-      <div class="project-banner-inner"><div class="project-kicker">Loongson Technology Corporation Limited · Jul.–Aug. 2024</div>
-      <h2>AOSP / LLVM for LoongArch</h2><p class="project-subtitle">Investigating a compiler-toolchain upgrade and system compatibility on an existing LoongArch Android port.</p></div></div></div><ul class="chip-list"><li>LLVM/Clang</li><li>Soong</li><li>Linux</li><li>Cross-compilation</li><li>Bionic</li><li>LoongArch64</li></ul><section class="section-panel"><h3>Following a failure across the software stack</h3><ol class="process-flow"><li><strong>Build configuration</strong><span>Soong modules, APIs, and toolchain selection.</span></li><li><strong>Compiler target</strong><span>Options and LoongArch backend support.</span></li><li><strong>System interfaces</strong><span>Kernel ABI, Linux UAPI, and Bionic.</span></li><li><strong>Runtime</strong><span>BoringSSL and ART architecture assumptions.</span></li></ol></section><section class="section-panel"><h3>My contribution</h3><ul class="detail-list"><li>Investigated duplicate Soong modules and API mismatches when integrating newer toolchain components.</li><li>Compared Clang option support and built LLVM/Clang from source to include the missing LoongArch target.</li><li>Built an ABI 2.0 kernel, regenerated Linux UAPI headers, and updated Bionic assembly for LoongArch.</li><li>Resolved three BoringSSL build errors recorded in my weekly reports and investigated remaining ART architecture and atomic-operation failures.</li></ul></section><section class="section-panel"><h3>Engineering lesson</h3><p>A compiler upgrade is a dependency problem across the build system, target support, headers, and runtime libraries. With guidance from colleagues, I narrowed changes to the necessary toolchain components and separated failures by build stage, making the source of each incompatibility easier to isolate.</p></section><section class="section-panel"><h3>Outcome</h3><p>The work advanced target support and resolved specific build blockers on top of an existing port. Remaining ART and runtime issues meant the upgraded AOSP build was not fully validated end to end.</p></section>
+      <header class="aosp-hero">
+        <p class="aosp-kicker">Loongson Technology · Jul.–Aug. 2024</p>
+        <div class="aosp-hero-grid">
+          <div>
+            <h2>AOSP / LLVM <br />for LoongArch</h2>
+            <p class="aosp-intro">Moving an Android toolchain forward.<br />Keeping the system working together.</p>
+          </div>
+          <figure class="aosp-transfer" aria-label="Cross-compilation from an x86 Linux host to a LoongArch64 target">
+            <svg viewBox="0 0 320 150" aria-hidden="true" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="12" y="29" width="112" height="77" rx="7" />
+                <path d="M3 115h130l-10 10H13Z" />
+                <path d="m37 54-12 12 12 12m62-24 12 12-12 12M78 48 61 85" class="aosp-hero-code" />
+                <path d="M146 76h45m-10-9 10 9-10 9" class="aosp-hero-arrow" />
+                <rect x="223" y="39" width="70" height="70" rx="9" />
+                <rect x="237" y="53" width="42" height="42" rx="3" />
+                <path d="M235 29v10m15-10v10m15-10v10m15-10v10M235 109v10m15-10v10m15-10v10m15-10v10M213 51h10m-10 15h10m-10 15h10m-10 15h10M293 51h10m-10 15h10m-10 15h10m-10 15h10" />
+              </g>
+              <g fill="currentColor" class="aosp-hero-core"><rect x="246" y="62" width="10" height="10" rx="1" /><rect x="261" y="62" width="10" height="10" rx="1" /><rect x="246" y="77" width="10" height="10" rx="1" /><rect x="261" y="77" width="10" height="10" rx="1" /></g>
+            </svg>
+            <figcaption><span>x86 Linux <small>Host</small></span><span>LoongArch64 <small>Target</small></span></figcaption>
+          </figure>
+        </div>
+      </header>
+
+      <section class="aosp-visual-section" aria-labelledby="stack-heading">
+        <div class="aosp-section-heading">
+          <div><span class="aosp-eyebrow">The system</span><h3 id="stack-heading">Three layers. One build.</h3></div>
+          <span class="aosp-interaction-hint">Select a layer</span>
+        </div>
+        <div class="aosp-stack-map" id="aosp-stack-map">
+          <svg class="aosp-wires" aria-hidden="true" focusable="false"><defs><marker id="stack-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" /></marker></defs><path data-wire="stack-0" /><path data-wire="stack-1" /><path data-wire="target" /></svg>
+          <div class="aosp-layers" role="group" aria-label="Explore the build stack">
+            <button type="button" class="aosp-layer" data-layer="0" aria-pressed="true" aria-controls="aosp-layer-detail">
+              <span class="aosp-node-top"><span class="aosp-node-number">01</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" /></svg></span>
+              <strong>Build system</strong><span class="aosp-node-label">AOSP / Soong</span>
+            </button>
+            <button type="button" class="aosp-layer" data-layer="1" aria-pressed="false" aria-controls="aosp-layer-detail">
+              <span class="aosp-node-top"><span class="aosp-node-number">02</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18" /></svg></span>
+              <strong>Compiler</strong><span class="aosp-node-label">LLVM / Clang</span>
+            </button>
+            <button type="button" class="aosp-layer" data-layer="2" aria-pressed="false" aria-controls="aosp-layer-detail">
+              <span class="aosp-node-top"><span class="aosp-node-number">03</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="5" rx="1" /><rect x="3" y="15" width="18" height="5" rx="1" /><path d="M7 6.5h1m-1 11h1M12 9v6" /></svg></span>
+              <strong>System libraries</strong><span class="aosp-node-label">Bionic / Runtime</span>
+            </button>
+          </div>
+          <div class="aosp-target"><span class="aosp-target-dot" aria-hidden="true"></span><span>LoongArch Android</span><small>Target environment</small></div>
+        </div>
+        <div class="aosp-layer-detail" id="aosp-layer-detail" aria-live="polite" aria-atomic="true">
+          <span class="aosp-detail-label">Build configuration</span>
+          <p>Align the build configuration with the selected compiler and platform.</p>
+        </div>
+      </section>
+
+      <section class="aosp-visual-section aosp-loop-section" aria-labelledby="loop-heading">
+        <div class="aosp-section-heading">
+          <div><span class="aosp-eyebrow">The approach</span><h3 id="loop-heading">Build. Update. Rebuild.</h3></div>
+          <span class="aosp-loop-label">Iterative integration</span>
+        </div>
+        <div class="aosp-loop-canvas" id="aosp-loop-canvas">
+          <svg class="aosp-wires" aria-hidden="true" focusable="false"><defs><marker id="loop-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" /></marker></defs><path data-wire="loop-0" /><path data-wire="loop-1" /><path data-wire="loop-return" /></svg>
+          <div class="aosp-loop-steps" role="group" aria-label="Explore the build loop">
+            <button type="button" class="aosp-step" data-step="0" aria-pressed="true" aria-controls="aosp-step-detail"><span class="aosp-step-index">01</span><strong>Compile</strong><span>Compiler components</span></button>
+            <button type="button" class="aosp-step" data-step="1" aria-pressed="false" aria-controls="aosp-step-detail"><span class="aosp-step-index">02</span><strong>Update</strong><span>Platform libraries</span></button>
+            <button type="button" class="aosp-step" data-step="2" aria-pressed="false" aria-controls="aosp-step-detail"><span class="aosp-step-index">03</span><strong>Rebuild</strong><span>Integrated toolchain</span></button>
+          </div>
+          <span class="aosp-feedback-label">Feed changes back into the build</span>
+        </div>
+        <div class="aosp-loop-footer">
+          <div id="aosp-step-detail" aria-live="polite" aria-atomic="true"><span class="aosp-detail-label">01 / Compile</span><p>Build usable compiler components for the next integration step.</p></div>
+          <div class="aosp-loop-controls"><button type="button" class="aosp-play" id="aosp-play" aria-label="Play the build loop walkthrough"><span aria-hidden="true">▶</span> Play loop</button><button type="button" class="aosp-next" id="aosp-next">Next step <span aria-hidden="true">→</span></button></div>
+        </div>
+        <noscript><p class="aosp-fallback">The loop combines compilation, platform updates and toolchain rebuilds to resolve integration dependencies.</p></noscript>
+      </section>
+
+      <div class="aosp-focus" aria-label="Contribution areas"><span class="aosp-eyebrow">Contribution areas</span><ul><li>Toolchain migration</li><li>Compatibility debugging</li><li>Iterative integration</li></ul></div>
     </main>
     <footer id="footer">
       <div class="inner">
